@@ -4,15 +4,62 @@
 		<link href="css/style.css" rel="stylesheet" media="screen">
     <script>
       window.onload = function(){
-        // ALL OF YOUR JAVASCRIPT CODE SHOULD GO HERE. 
-        // We have to use window.onload so your JavaScript doesn't execute until the page has loaded and all HTML has been downloaded to your browser
-        
-      };
+				// var geemails = data store
+				// console.log(24/7)
+				// array of (10)objects and each object has properties of (body, date, sender ,subject)
+
+				for(var i = 0; i<geemails.length; i++){
+					
+				var dateBox = document.createElement('div');
+				dateBox.className = 'dates';
+				dateBox.innerHTML = 'Date:' + geemails[i].date;
+				main.appendChild(dateBox);
+
+				var subjBox = document.createElement('div');
+				subjBox.className = 'subjects';
+				subjBox.innerHTML = 'Subject: ' + geemails[i].subject;
+				main.appendChild(subjBox);
+				
+				var sendBox = document.createElement('div');
+				sendBox.className = "senders";
+				sendBox.innerHTML ='Send To: ' + geemails[i].sender;
+				main.appendChild(sendBox);
+
+				var bodyBox = document.createElement('div');
+				bodyBox.className = 'bodies';
+				bodyBox.innerHTML = 'body: ' + geemails[i].body;
+				main.appendChild(bodyBox);
+
+				var mainDiv = document.createElement('div');
+        // mainDiv.className = 'container';
+        mainDiv.innerHTML = geemails[i].body;
+        mainDiv.addEventListener('click', showMsg);
+        document.body.appendChild(mainDiv);
+        //  console.log(mainDiv);
+         function showMsg(){
+            var bElem = this.querySelectorAll('.body')[0];
+            if (bElem.style.display === 'block'){
+                bElem.style.display = 'none';
+            }else{
+                bElem.style.display = 'block';
+
+ 					}
+
+				var messageCount = document.createElement('div');
+				messageCount.className = 'messages';
+				messageCount.innerHTML = 'count: ' + geemails.length;
+				main.appendChild(messageCount);
+				 }
+				};
+				
+
+			
+			};
     </script>
 	</head>
 	<body>
-		<div class="container" id="main">
-			Build Me!
+		<h3 id="main"></h3>
+		
 		</div>
 	</body>
 </html>
