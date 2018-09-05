@@ -8,10 +8,7 @@
 		<link href="css/style.css" rel="stylesheet" media="screen">
     <script>
       window.onload = function(){
-				// var geemails = data store
-				// console.log(24/7)
-				// array of (10)objects and each object has properties of (body, date, sender ,subject)
-
+		
 				var messageCount = document.createElement('div');
 				messageCount.id = 'mMessage';
 				messageCount.innerHTML = "inbox count: " + geemails.length;
@@ -55,7 +52,6 @@
 		 } 
 			function newGs(){
 
-		// var newDiv = setInterval(newGs, 10000);
 				var msgNew = document.createElement('div');
 				msgNew.className = 'msgNew';
 				msgNew.innerHTML = ' ';
@@ -82,13 +78,12 @@
 				newBody.innerHTML = 'Body: ' + getNewMessage().body;
 				msgNew.appendChild(newBody); 
 
-		var Lcounter = geemails.length++;
+		var Lcounter = ++geemails.length;
 		var mail = document.getElementById('mMessage');
 		mail.className = 'updateCount';
 		mail.innerHTML = 'inbox count: ' + Lcounter;
 		(Lcounter.concat(mail));
 		countPls.appendChild(messageCount);
-		// var newDiv = setInterval(newGs, 10000);
 
 		function showNewMsg(){
 			var aElem = this.querySelectorAll('.newBodies')[0];
@@ -99,12 +94,7 @@
 			}
 		}
 	}
-	setInterval(newGs, 10000);
-
-
-
-// newGs();
-		
+	setInterval(newGs, 10000);		
 				};
 					
 				
