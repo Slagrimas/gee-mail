@@ -51,7 +51,7 @@
 		 } 
 			function newGs(){
 
-		var newDiv = setInterval(newGs, 10000);
+		// var newDiv = setInterval(newGs, 10000);
 				var msgNew = document.createElement('div');
 				msgNew.className = 'msgNew';
 				msgNew.innerHTML = ' ';
@@ -83,7 +83,7 @@
 		mail.className = 'updateCount';
 		mail.innerHTML = 'inbox count: ' + Lcounter;
 		countPls.appendChild(messageCount);
-
+		var newDiv = setInterval(newGs, 10000);
 
 		function showNewMsg(){
 			var aElem = this.querySelectorAll('.newBodies')[0];
