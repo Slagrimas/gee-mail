@@ -7,12 +7,12 @@
 				// var geemails = data store
 				// console.log(24/7)
 				// array of (10)objects and each object has properties of (body, date, sender ,subject)
-				
-				var messageCount = document.createElement('div');
-				messageCount.className = 'messages';
-				messageCount.innerHTML = 'count: ' + geemails.length;
-				main.appendChild(messageCount);
 
+				var messageCount = document.createElement('div');
+				messageCount.id = 'mMessage';
+				messageCount.innerHTML = ' ';
+				document.body.appendChild(messageCount);
+				
 				for(var i = 0; i<geemails.length; i++){
 					
 				var parentDiv = document.createElement('div');
@@ -38,28 +38,77 @@
 
 				var bodyBox = document.createElement('div');
 				bodyBox.className = 'bodies';
-				bodyBox.innerHTML = 'body: ' + geemails[i].body;
+				bodyBox.innerHTML = 'Body: ' + geemails[i].body;
 				parentDiv.appendChild(bodyBox);
-
+}
          function showMsg(){
             var bElem = this.querySelectorAll('.bodies')[0];
             if (bElem.style.display === 'block'){
                 bElem.style.display = 'none';
             }else{
                 bElem.style.display = 'block';
-
  						}
-				 	}
-				};
-				
+		 } 
+			function newGs(){
 
-			
-			};
+		var newDiv = setInterval(newGs, 10000);
+				var msgNew = document.createElement('div');
+				msgNew.className = 'msgNew';
+				msgNew.innerHTML = ' ';
+				msgNew.addEventListener('click', showNewMsg);
+				document.body.appendChild(msgNew);
+				
+				var newDate = document.createElement('div');
+				newDate.className = 'newDates';
+				newDate.innerHTML = 'Date : ' + getNewMessage().date;
+				msgNew.appendChild(newDate);
+
+				var newSubj = document.createElement('div');
+				newSubj.className = 'newSubjects';
+				newSubj.innerHTML = 'Subjects: ' + getNewMessage().subject;
+				msgNew.appendChild(newSubj);
+
+				var newSend = document.createElement('div');
+				newSend.className = 'newSenders';
+				newSend.innerHTML = 'Send: ' + getNewMessage().sender;
+				msgNew.appendChild(newSend);
+
+				var newBody = document.createElement('div');
+				newBody.className = 'newBodies';
+				newBody.innerHTML = 'Body: ' + getNewMessage().body;
+				msgNew.appendChild(newBody); 
+
+		var Lcounter = geemails.length++;
+		var mail = document.getElementById('mMessage');
+		mail.className = 'updateCount';
+		mail.innerHTML = 'inbox count: ' + Lcounter;
+		countPls.appendChild(messageCount);
+
+
+		function showNewMsg(){
+			var aElem = this.querySelectorAll('.newBodies')[0];
+			if(aElem.style.display === 'block'){
+				aElem.style.display = 'none';
+			}else{
+				aElem.style.display = 'block';
+			}
+		}
+	}
+
+
+
+newGs();
+		
+				};
+					
+				
+	
     </script>
 	</head>
 	<body>
+		<title>G's Mail</title>
 		<h3 id="main"></h3>
-		
+		<div id="countPls"></div>
 		</div>
 	</body>
 </html>
