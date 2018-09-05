@@ -10,7 +10,7 @@
 
 				var messageCount = document.createElement('div');
 				messageCount.id = 'mMessage';
-				messageCount.innerHTML = ' ';
+				messageCount.innerHTML = geemails.length;
 				document.body.appendChild(messageCount);
 				
 				for(var i = 0; i<geemails.length; i++){
@@ -83,7 +83,7 @@
 		mail.className = 'updateCount';
 		mail.innerHTML = 'inbox count: ' + Lcounter;
 		countPls.appendChild(messageCount);
-		var newDiv = setInterval(newGs, 10000);
+		// var newDiv = setInterval(newGs, 10000);
 
 		function showNewMsg(){
 			var aElem = this.querySelectorAll('.newBodies')[0];
@@ -94,10 +94,11 @@
 			}
 		}
 	}
+	setInterval(newGs, 10000);
 
 
 
-newGs();
+// newGs();
 		
 				};
 					
