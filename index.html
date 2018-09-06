@@ -11,12 +11,13 @@
 		
 				var messageCount = document.createElement('div');
 				messageCount.id = 'mMessage';
-				messageCount.innerHTML = "inbox count: " + geemails.length;
+				messageCount.innerHTML = "inbox count: " + geemails.lengths;
 				document.body.appendChild(messageCount);
 				
 				for(var i = 0; i<geemails.length; i++){
 					
 				var parentDiv = document.createElement('div');
+				parentDiv.id = "bodyMsgOk"
 				parentDiv.className = 'bodyMsg';
 				parentDiv.innerHTML = " ";
 				parentDiv.addEventListener('click', showMsg);
@@ -52,7 +53,7 @@
  						}
 		 } 
 			function newGs(){
-				var yessah = getNewMessage;
+				var yessah = getNewMessage();
 
 				var msgNew = document.createElement('div');
 				msgNew.className = 'msgNew';
@@ -62,29 +63,30 @@
 				
 				var newDate = document.createElement('div');
 				newDate.className = 'newDates';
-				newDate.innerHTML = 'Date : ' + yessah().date;
+				newDate.innerHTML = 'Date : ' + yessah.date;
 				msgNew.appendChild(newDate);
 
 				var newSubj = document.createElement('div');
 				newSubj.className = 'newSubjects';
-				newSubj.innerHTML = 'Subjects: ' + yessah().subject;
+				newSubj.innerHTML = 'Subjects: ' + yessah.subject;
 				msgNew.appendChild(newSubj);
 
 				var newSend = document.createElement('div');
 				newSend.className = 'newSenders';
-				newSend.innerHTML = 'Send: ' + yessah().sender;
+				newSend.innerHTML = 'Send: ' + yessah.sender;
 				msgNew.appendChild(newSend);
 
 				var newBody = document.createElement('div');
 				newBody.className = 'newBodies';
-				newBody.innerHTML = 'Body: ' + yessah().body;
+				newBody.innerHTML = 'Body: ' + yessah.body;
 				msgNew.appendChild(newBody); 
 
-		var Lcounter = geemails.length++;
-		var mail = document.getElementById('mMessage');
-		mail.className = 'updateCount';
-		mail.innerHTML = 'inbox count: ' + Lcounter;
-		(Lcounter.concat(mail));
+		var aloha = document.getElementsByClassName("bodyMsg").length++;
+		// var mail = document.getElementById('mMessage');
+		// mail.className = 'updateCount';
+		// mail.innerHTML = 'inbox count: ' + aloha;
+	
+		(aloha.concat(geemails.length));
 		countPls.appendChild(messageCount);
 
 		function showNewMsg(){
@@ -95,7 +97,7 @@
 				aElem.style.display = 'block';
 			}
 		}
-	}
+			}
 	setInterval(newGs, 10000);		
 				};
 					
