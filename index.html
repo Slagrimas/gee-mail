@@ -42,6 +42,7 @@
 				bodyBox.innerHTML = 'Body: ' + geemails[i].body;
 				parentDiv.appendChild(bodyBox);
 }
+		
          function showMsg(){
             var bElem = this.querySelectorAll('.bodies')[0];
             if (bElem.style.display === 'block'){
@@ -51,6 +52,7 @@
  						}
 		 } 
 			function newGs(){
+				var yessah = getNewMessage;
 
 				var msgNew = document.createElement('div');
 				msgNew.className = 'msgNew';
@@ -60,25 +62,25 @@
 				
 				var newDate = document.createElement('div');
 				newDate.className = 'newDates';
-				newDate.innerHTML = 'Date : ' + getNewMessage().date;
+				newDate.innerHTML = 'Date : ' + yessah().date;
 				msgNew.appendChild(newDate);
 
 				var newSubj = document.createElement('div');
 				newSubj.className = 'newSubjects';
-				newSubj.innerHTML = 'Subjects: ' + getNewMessage().subject;
+				newSubj.innerHTML = 'Subjects: ' + yessah().subject;
 				msgNew.appendChild(newSubj);
 
 				var newSend = document.createElement('div');
 				newSend.className = 'newSenders';
-				newSend.innerHTML = 'Send: ' + getNewMessage().sender;
+				newSend.innerHTML = 'Send: ' + yessah().sender;
 				msgNew.appendChild(newSend);
 
 				var newBody = document.createElement('div');
 				newBody.className = 'newBodies';
-				newBody.innerHTML = 'Body: ' + getNewMessage().body;
+				newBody.innerHTML = 'Body: ' + yessah().body;
 				msgNew.appendChild(newBody); 
 
-		var Lcounter = ++geemails.length;
+		var Lcounter = geemails.length++;
 		var mail = document.getElementById('mMessage');
 		mail.className = 'updateCount';
 		mail.innerHTML = 'inbox count: ' + Lcounter;
