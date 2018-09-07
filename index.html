@@ -40,11 +40,7 @@
 				parentDiv.appendChild(bodyBox);
 
 				}
-
-				var mainBox = document.getElementsByClassName('bodies');
-				
-			
-				
+							
          function showMsg(){
             var bElem = this.querySelectorAll('.bodies')[0];
             if (bElem.style.display === 'block'){
@@ -53,22 +49,17 @@
                 bElem.style.display = 'block';
  						}
 					}
-
+	    	var mainBox = document.getElementsByClassName('bodies');
 		 var countBox = document.createElement('div');
 		 countBox.id = 'eMailCount';
 		 countBox.innerHTML = 'inbox count: ' + mainBox.length++;
 		 main.appendChild(countBox);
-					
-		
-
+			
 			function newGs(){
 				var yessah = getNewMessage();
 				var mailBox = document.createElement('div')
 				mailBox.className = 'mails';
 				inbox.appendChild(mailBox)
-
-				
-
 
 				var msgNew = document.createElement('div');
 				msgNew.className = 'msgNew';
@@ -96,13 +87,8 @@
 				newBody.innerHTML = 'Body: ' + yessah.body;
 				msgNew.appendChild(newBody); 
 
-		
 		 countBox.innerHTML = 'inbox count: ' + mainBox.length++;
 	
-				
-
-			
-
 		function showNewMsg(){
 			var aElem = this.querySelectorAll('.bodies')[0];
 			if(aElem.style.display === 'block'){
