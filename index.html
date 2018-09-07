@@ -8,12 +8,7 @@
 		<link href="css/style.css" rel="stylesheet" media="screen">
     <script>
       window.onload = function(){
-		
-				// var messageCount = document.createElement('div');
-				// messageCount.id = 'mMessage';
-				// messageCount.innerHTML = "inbox count: " + geemails.lengths;
-				// document.body.appendChild(messageCount);
-				// THIS WORKS //
+	
 				
 				for(var i = 0; i<geemails.length; i++){
 					
@@ -46,8 +41,7 @@
 
 				}
 				var mainBox = document.getElementsByClassName('bodies');
-				console.log(mainBox.length);
-				//TEST//
+			
 				
          function showMsg(){
             var bElem = this.querySelectorAll('.bodies')[0];
@@ -57,7 +51,7 @@
                 bElem.style.display = 'block';
  						}
 					}
-					
+
 		 var countBox = document.createElement('div');
 		 countBox.id = 'eMailCount';
 		 countBox.innerHTML = 'inbox count ' + mainBox.length;
@@ -70,7 +64,7 @@
 				var mailBox = document.createElement('div')
 				mailBox.className = 'mails';
 				inbox.appendChild(mailBox)
-				//mailBox below are TEST//
+				
 
 
 				var msgNew = document.createElement('div');
@@ -99,14 +93,7 @@
 				newBody.innerHTML = 'Body: ' + yessah.body;
 				msgNew.appendChild(newBody); 
 
-		// var aloha = document.getElementsByClassName("bodyMsg").length++;
-		// var mail = document.createElement('div');
-		// mail.className = 'updateCount';
-		// mail.innerHTML = 'inbox count: ' + aloha;
-		//This somewhat works//
 	
-		// (aloha.concat(geemails.length));
-		// countPls.appendChild(messageCount);
 
 		function showNewMsg(){
 			var aElem = this.querySelectorAll('.newBodies')[0];
@@ -116,8 +103,7 @@
 				aElem.style.display = 'block';
 			}
 		}
-		inbox.innerHTML = 'inbox count ' + mainBox.length++
-		console.log(inbox);
+		
 			}
 	setInterval(newGs, 10000);		
 				};
