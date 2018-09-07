@@ -42,6 +42,7 @@
 				}
 
 				var mainBox = document.getElementsByClassName('bodies');
+				
 			
 				
          function showMsg(){
@@ -53,10 +54,10 @@
  						}
 					}
 
-		//  var countBox = document.createElement('div');
-		//  countBox.id = 'eMailCount';
-		//  countBox.innerHTML = 'inbox count: ' + mainBox.length++;
-		//  main.appendChild(countBox);
+		 var countBox = document.createElement('div');
+		 countBox.id = 'eMailCount';
+		 countBox.innerHTML = 'inbox count: ' + mainBox.length++;
+		 main.appendChild(countBox);
 					
 		
 
@@ -95,11 +96,9 @@
 				newBody.innerHTML = 'Body: ' + yessah.body;
 				msgNew.appendChild(newBody); 
 
-				
-				var countBox = document.createElement('div');
-		 countBox.id = 'eMailCount';
+		
 		 countBox.innerHTML = 'inbox count: ' + mainBox.length++;
-		 main.appendChild(countBox);
+	
 				
 
 			}
