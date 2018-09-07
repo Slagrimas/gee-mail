@@ -41,7 +41,7 @@
 
 				}
 
-				var mainBox = document.getElementsByClassName('newDates');
+				var mainBox = document.getElementsByClassName('bodies');
 			
 				
          function showMsg(){
@@ -53,10 +53,10 @@
  						}
 					}
 
-		 var countBox = document.createElement('div');
-		 countBox.id = 'eMailCount';
-		 countBox.innerHTML = 'inbox count: ' + mainBox.length;
-		 main.appendChild(countBox);
+		//  var countBox = document.createElement('div');
+		//  countBox.id = 'eMailCount';
+		//  countBox.innerHTML = 'inbox count: ' + mainBox.length++;
+		//  main.appendChild(countBox);
 					
 		
 
@@ -65,6 +65,7 @@
 				var mailBox = document.createElement('div')
 				mailBox.className = 'mails';
 				inbox.appendChild(mailBox)
+
 				
 
 
@@ -90,11 +91,18 @@
 				msgNew.appendChild(newSend);
 
 				var newBody = document.createElement('div');
-				newBody.className = 'newBodies';
+				newBody.className = 'bodies';
 				newBody.innerHTML = 'Body: ' + yessah.body;
 				msgNew.appendChild(newBody); 
 
-	
+				
+				var countBox = document.createElement('div');
+		 countBox.id = 'eMailCount';
+		 countBox.innerHTML = 'inbox count: ' + mainBox.length++;
+		 main.appendChild(countBox);
+				
+
+			}
 
 		function showNewMsg(){
 			var aElem = this.querySelectorAll('.newBodies')[0];
@@ -105,7 +113,7 @@
 			}
 		}
 		
-			}
+			
 	setInterval(newGs, 10000);		
 				};
 					
